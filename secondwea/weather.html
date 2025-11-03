@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="weather-body">
+    <!-- Header -->
+    <header class="header">
+        <h1>Weather Forecast</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="weather-container">
+        <!-- City Search -->
+        <section class="search-section">
+            <h2>ENTER YOUR CITY</h2>
+            <form id="city-form">
+                <input type="text" id="city" placeholder="Enter city name" required>
+                <button type="submit">Get Weather</button>
+            </form>
+        </section>
+
+        <!-- Current Weather -->
+        <section id="current-weather" class="weather-section hidden">
+            <h2>Current Weather in <span id="current-location"></span></h2>
+            <div class="weather-details">
+                <div class="weather-box">
+                    <h3>Temperature</h3>
+                    <p><span id="current-temp"></span>°C</p>
+                </div>
+                <div class="weather-box">
+                    <h3>Humidity</h3>
+                    <p><span id="current-humidity"></span>%</p>
+                </div>
+                <div class="weather-box">
+                    <h3>Wind Speed</h3>
+                    <p><span id="current-wind"></span> m/s</p>
+                </div>
+                <div class="weather-box">
+                    <h3>Rainfall</h3>
+                    <p><span id="current-rainfall"></span></p>
+                </div>
+                <div class="weather-box">
+                    <h3>Description</h3>
+                    <p><span id="current-description"></span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5-Day Forecast -->
+        <section id="forecast" class="weather-section hidden">
+            <h2>5-Day Forecast</h2>
+            <div id="forecast-cards" class="forecast-container"></div>
+        </section>
+
+        <!-- Navigation -->
+        <button class="recommendation-button" onclick="goToRecommendations()">Nearby Recommendations</button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Weatherify © 2025 | IMSEC</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
